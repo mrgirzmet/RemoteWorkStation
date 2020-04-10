@@ -24,6 +24,14 @@ import {mainListItems, secondaryListItems} from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Chip from '@material-ui/core/Chip';
+import Button from '@material-ui/core/Button';
+
 
 function Copyright() {
   return (
@@ -187,6 +195,42 @@ export default function Dashboard() {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
+            <ExpansionPanel defaultExpanded>
+              <ExpansionPanelSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1c-content"
+                id="panel1c-header"
+              >
+                <div className={classes.column}>
+                  <Typography className={classes.heading}>Location</Typography>
+                </div>
+                <div className={classes.column}>
+                  <Typography className={classes.secondaryHeading}>Select trip destination</Typography>
+                </div>
+              </ExpansionPanelSummary>
+              <ExpansionPanelDetails className={classes.details}>
+                <div className={classes.column} />
+                <div className={classes.column}>
+                  <Chip label="Barbados" onDelete={() => {}} />
+                </div>
+                <div className={clsx(classes.column, classes.helper)}>
+                  <Typography variant="caption">
+              Select your destination of choice
+                    <br />
+                    <a href="#secondary-heading-and-columns" className={classes.link}>
+                Learn more
+                    </a>
+                  </Typography>
+                </div>
+              </ExpansionPanelDetails>
+              <Divider />
+              <ExpansionPanelActions>
+                <Button size="small">Cancel</Button>
+                <Button size="small" color="primary">
+            Save
+                </Button>
+              </ExpansionPanelActions>
+            </ExpansionPanel>
             {/* Chart */}
             {/* <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
