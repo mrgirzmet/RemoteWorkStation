@@ -38,7 +38,7 @@ export type KanbanRecordDbRecordUserData = {
     dueDate: string;
     description: string;
     barcode: string;
-    memo: string;
+    taskName: string;
     flags: string[];
     tags: string[];
     boardId: string;
@@ -56,7 +56,7 @@ export interface KanbanBoardDbRecordUserData {
     teamOrStories: LaneDef[];
     tags: TagDef[];
     displayBarcode: boolean,
-    displayMemo: boolean,
+    displayTaskName: boolean,
     displayFlags: boolean,
     displayTags: boolean,
     preferArchive: boolean,
