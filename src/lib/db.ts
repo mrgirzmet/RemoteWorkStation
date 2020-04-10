@@ -1,11 +1,5 @@
-// Copyright (c) 2019 Shellyl_N and Authors
-// license: ISC
-// https://github.com/shellyln
-
 import PouchDB     from 'pouchdb-browser';
 import PouchDBFind from 'pouchdb-find';
-
-
 
 const dbBaseName = window.location.pathname.replace(/\//g, '_');
 

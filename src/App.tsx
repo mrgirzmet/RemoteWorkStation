@@ -1,7 +1,3 @@
-// Copyright (c) 2019 Shellyl_N and Authors
-// license: ISC
-// https://github.com/shellyln
-
 import React,
        { useEffect,
          useRef }                from 'react';
@@ -27,7 +23,7 @@ import CalendarView              from './views/CalendarView';
 import EditorView                from './views/EditorView';
 import SettingsView              from './views/SettingsView';
 import ConfirmDialog             from './components/ConfirmDialog';
-
+import MessagingView             from './views/MessagingView';
 
 
 type AppProps = AppEventsState & AppEventsActions;
@@ -133,6 +129,7 @@ const App: React.FC<AppProps> = (props) => {
                     <Route path="/calendar/:id?" component={CalendarView} />
                     <Route path="/edit/:id?" component={EditorView} />
                     <Route path="/config/" component={SettingsView} />
+                    <Route path="/messaging" component={MessagingView} />
                 </Switch>
                 {props.alertDialog.open ?
                     <ConfirmDialog {...props.alertDialog} /> :
