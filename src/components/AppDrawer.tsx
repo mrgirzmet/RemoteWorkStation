@@ -1,7 +1,3 @@
-// Copyright (c) 2019 Shellyl_N and Authors
-// license: ISC
-// https://github.com/shellyln
-
 import React                  from 'react';
 import { connect }            from 'react-redux';
 import { withRouter,
@@ -98,6 +94,8 @@ const AppDrawer: React.FC<AppDrawerProps> = (props) => {
                 view = 'calendar';
             } else if (props.history.location.pathname.startsWith('/edit/')) {
                 view = 'edit';
+            } else if (props.history.location.pathname.startsWith('/messaging')) {
+                view = 'messaging';
             }
         }
         props.history.push(`/${view}/${id}`);
@@ -120,7 +118,7 @@ const AppDrawer: React.FC<AppDrawerProps> = (props) => {
         }
     }
 
-    function handleChangeView(viewName: string, id: string) {
+function handleChangeView(viewName: string, id: string) {
         if (id === props.activeBoardId) {
             props.history.push(`/${viewName}/${id}`);
         }
@@ -214,6 +212,12 @@ const AppDrawer: React.FC<AppDrawerProps> = (props) => {
                                 onClick={ev => handleChangeView('edit', props.activeBoardId)}>
                             <ListItemIcon><EditIcon /></ListItemIcon>
                             {open ? <ListItemText primary="Editor" /> : <></>}
+                        </ListItem>
+                        <ListItem button
+                                selected={currentView === 'messaging'}
+                                onClick={ev => handleChangeView('messaging', props.activeBoardId)}>
+                            <ListItemIcon><EditIcon /></ListItemIcon>
+                            {open ? <ListItemText primary="Messaging" /> : <></>}        
                         </ListItem>
                     </List>
                     {open ?
