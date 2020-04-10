@@ -55,6 +55,7 @@ export async function getAppEventsReducer() {
                 open: false,
                 title: '',
                 message: '',
+                isLoggedIn: false,
                 onClose: () => void 0,
             },
             appConfig: {
@@ -96,6 +97,11 @@ export async function getAppEventsReducer() {
                     alertDialog: initialState,
                 });
             })
+            .case(appEventsActions.setLoggedIn, (state, payload) => {
+                return Object.assign({}, state, {
+                    alertDialog: payload,
+                });
+            })
 
             //// updateAppConfig async actions ////
             .case(appEventsActions.startUpdateAppConfig, (state, payload) => {
@@ -120,6 +126,7 @@ export async function getAppEventsReducer() {
                     setTimeout(() => {
                         getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                             open: true,
+                            isLoggedIn: true,
                             title: 'Done',
                             message: 'Settings is saved successfully',
                             singleButton: true,
@@ -139,6 +146,7 @@ export async function getAppEventsReducer() {
                         .catch(err => {
                             getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                                 open: true,
+                                isLoggedIn: true,
                                 title: 'Error',
                                 message: 'Failed to connect to the remote DB: ' + err.message,
                                 singleButton: true,
@@ -156,6 +164,7 @@ export async function getAppEventsReducer() {
                     setTimeout(() => {
                         getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                             open: true,
+                            isLoggedIn: true,
                             title: 'Error',
                             message: 'Failed to update settings: ' + err.message,
                             singleButton: true,

@@ -40,6 +40,7 @@ const resetApplication =
 
 export const appEventsActions = {
     showAlertDialog: actionCreator<ConfirmDialogProps>('ACTIONS_SHOW_ALERT_DIALOG'),
+    setLoggedIn: actionCreator<ConfirmDialogProps>('SET_LOGGED_IN'),
     closeAlertDialog: actionCreator<void>('ACTIONS_CLOSE_ALERT_DIALOG'),
 
     startUpdateAppConfig: updateAppConfig.started,

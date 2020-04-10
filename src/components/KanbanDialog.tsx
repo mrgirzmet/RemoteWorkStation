@@ -339,6 +339,7 @@ const KanbanDialog: React.FC<KanbanDialogProps> = (props) => {
             {confirmOpen ?
                 <ConfirmDialog
                     open={true}
+                    isLoggedIn={true}
                     title={props.board.preferArchive ?
                         (archived ? 'Unarchive kanban' : 'Archive kanban') :
                         'Delete kanban'}

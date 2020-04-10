@@ -145,6 +145,7 @@ export async function getKanbanBoardReducer() {
                     setTimeout(() => {
                         getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                             open: true,
+                            isLoggedIn: true,
                             title: 'Error',
                             message: 'Failed to add board: ' + err.message,
                             singleButton: true,
@@ -188,6 +189,7 @@ export async function getKanbanBoardReducer() {
                         setTimeout(() => {
                             getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                                 open: true,
+                                isLoggedIn: true,
                                 title: 'Error',
                                 message: 'Failed to change active board: ' + e.message,
                                 singleButton: true,
@@ -256,6 +258,7 @@ export async function getKanbanBoardReducer() {
                         setTimeout(() => {
                             getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                                 open: true,
+                                isLoggedIn: true,
                                 title: 'Error',
                                 message: 'Failed to change board name: ' + e.message,
                                 singleButton: true,
@@ -323,6 +326,7 @@ export async function getKanbanBoardReducer() {
                                 setTimeout(() => {
                                     getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                                         open: true,
+                                        isLoggedIn: true,
                                         title: 'Done',
                                         message: 'Board is deleted successfully',
                                         singleButton: true,
@@ -339,6 +343,7 @@ export async function getKanbanBoardReducer() {
                         setTimeout(() => {
                             getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                                 open: true,
+                                isLoggedIn: true,
                                 title: 'Error',
                                 message: 'Failed to delete board: ' + e.message,
                                 singleButton: true,
@@ -395,6 +400,7 @@ export async function getKanbanBoardReducer() {
                     setTimeout(() => {
                         getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                             open: true,
+                            isLoggedIn: true,
                             title: 'Error',
                             message: 'Failed to add sticky: ' + err.message,
                             singleButton: true,
@@ -462,6 +468,7 @@ export async function getKanbanBoardReducer() {
                     setTimeout(() => {
                         getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                             open: true,
+                            isLoggedIn: true,
                             title: 'Error',
                             message: 'Failed to save the sticky: ' + err.message,
                             singleButton: true,
@@ -515,6 +522,7 @@ export async function getKanbanBoardReducer() {
                     setTimeout(() => {
                         getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                             open: true,
+                            isLoggedIn: true,
                             title: 'Error',
                             message: 'Failed to save the sticky: ' + err.message,
                             singleButton: true,
@@ -567,6 +575,7 @@ export async function getKanbanBoardReducer() {
                     setTimeout(() => {
                         getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                             open: true,
+                            isLoggedIn: true,
                             title: 'Error',
                             message: 'Failed to archive the sticky: ' + err.message,
                             singleButton: true,
@@ -618,6 +627,7 @@ export async function getKanbanBoardReducer() {
                     setTimeout(() => {
                         getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                             open: true,
+                            isLoggedIn: true,
                             title: 'Error',
                             message: 'Failed to unarchive the sticky: ' + err.message,
                             singleButton: true,
@@ -665,6 +675,7 @@ export async function getKanbanBoardReducer() {
                     setTimeout(() => {
                         getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                             open: true,
+                            isLoggedIn: true,
                             title: 'Error',
                             message: 'Failed to delete the sticky: ' + err.message,
                             singleButton: true,
@@ -761,6 +772,7 @@ export async function getKanbanBoardReducer() {
                         setTimeout(() => {
                             getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                                 open: true,
+                                isLoggedIn: true,
                                 title: 'Done',
                                 message: 'Board is saved successfully',
                                 singleButton: true,
@@ -775,6 +787,7 @@ export async function getKanbanBoardReducer() {
                         setTimeout(() => {
                             getConstructedAppStore().dispatch(appEventsActions.showAlertDialog({
                                 open: true,
+                                isLoggedIn: true,
                                 title: 'Error',
                                 message: 'Failed to save the board: ' + e.message,
                                 singleButton: true,

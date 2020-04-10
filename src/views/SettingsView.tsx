@@ -84,6 +84,7 @@ const SettingsView: React.FC<SettingsViewProps> = (props) => {
         } catch (e) {
             props.showAlertDialog({
                 open: true,
+                isLoggedIn: true,
                 title: 'Error',
                 message: e.message || String(e),
                 singleButton: true,
@@ -149,6 +150,7 @@ const SettingsView: React.FC<SettingsViewProps> = (props) => {
             {confirmResetAppOpen ?
                 <ConfirmDialog
                     open={confirmResetAppOpen}
+                    isLoggedIn={true}
                     title="Reset application"
                     message={'Are you sure want to reset application?\nAll local data and configurations will be REMOVED!'}
                     colorIsSecondary={true}

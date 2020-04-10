@@ -53,6 +53,8 @@ export function mapDispatchToProps(dispatch: Dispatch<Action<any>>) {
             dispatch(kanbanBoardActions.startUnarchiveSticky({ kanbanId })),
         deleteSticky: (kanbanId: string) =>
             dispatch(kanbanBoardActions.startDeleteSticky(Object.assign({}, { kanbanId }, { dispatch }))),
+        setLoggedIn: (v: ConfirmDialogProps) =>
+            dispatch(appEventsActions.setLoggedIn(v)),
     }
 }
 

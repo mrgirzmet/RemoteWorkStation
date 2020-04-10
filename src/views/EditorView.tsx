@@ -86,6 +86,7 @@ const EditorView: React.FC<EditorViewProps> = (props) => {
         } catch (e) {
             props.showAlertDialog({
                 open: true,
+                isLoggedIn: true,
                 title: 'Error',
                 message: e.message || String(e),
                 singleButton: true,
@@ -187,6 +188,7 @@ const EditorView: React.FC<EditorViewProps> = (props) => {
             {confirmDeletingOpen ?
                 <ConfirmDialog
                     open={confirmDeletingOpen}
+                    isLoggedIn={true}
                     title="Delete board"
                     message="Are you sure want to delete the board?"
                     colorIsSecondary={true}

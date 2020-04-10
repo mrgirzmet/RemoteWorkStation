@@ -107,6 +107,7 @@ export type ConfirmDialogProps = {
     open: boolean,
     title: string,
     message: string,
+    isLoggedIn: boolean,
     singleButton?: boolean;
     colorIsSecondary?: boolean,
     applyButtonCaption?: string,
