@@ -62,7 +62,7 @@ const KanbanDialog: React.FC<KanbanDialogProps> = (props) => {
     const [confirmOpen, setConfirmOpen] = React.useState(false);
     const [description, setDescription] = React.useState(props.record.description);
     const [barcode, setBarcode] = React.useState(props.record.barcode);
-    const [memo, setMemo] = React.useState(props.record.memo);
+    const [taskName, setTaskName] = React.useState(props.record.taskName);
     const [tags, setTags] = React.useState(props.record.tags ?
         props.record.tags.map(x => x.includes(',') ? `"${x.replace(/"/g, '""')}"` : x).join(', ') : '');
     const [flags, setFlags] = React.useState(props.record.flags ?
@@ -94,7 +94,7 @@ const KanbanDialog: React.FC<KanbanDialogProps> = (props) => {
         props.onApply(Object.assign({}, props.record, {
             description,
             barcode,
-            memo,
+            taskName,
             tags: (tagsParsed[0] || []).map(x => x.trim()).filter(x => x.length > 0),
             flags: (flagsParsed[0] || []).map(x => x.trim()).filter(x => x.length > 0),
             dueDate: (dueDate && !Number.isNaN(dueDate.getTime())) ? formatDate(dueDate) : '',
@@ -142,7 +142,7 @@ const KanbanDialog: React.FC<KanbanDialogProps> = (props) => {
     }
 
     function handleMemoChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
-        setMemo(event.target.value);
+        setTaskName(event.target.value);
     }
 
     function handleConfirmArchiving(apply: boolean) {
@@ -173,7 +173,7 @@ const KanbanDialog: React.FC<KanbanDialogProps> = (props) => {
         <>
             <Dialog open={open} onClose={handleCancelClick} aria-labelledby={formDialogTitleId}>
                 <DialogTitle id={formDialogTitleId} style={{paddingBottom: '0'}}>
-                    Edit Kanban
+                    Edit Task
                     <Button
                         className={clsx(classes.fabDelete)}
                         variant="outlined"
@@ -192,6 +192,18 @@ const KanbanDialog: React.FC<KanbanDialogProps> = (props) => {
                 </DialogTitle>
                 <DialogContent>
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                        <div>
+                            <TextField
+                                margin="dense"
+                                label="Task Name"
+                                multiline
+                                rows={1}
+                                rowsMax={16}
+                                fullWidth
+                                value={taskName}
+                                onChange={handleMemoChange}
+                            />
+                        </div>
                         <div>
                             <TextField
                                 margin="dense"
@@ -309,21 +321,6 @@ const KanbanDialog: React.FC<KanbanDialogProps> = (props) => {
                                     fullWidth
                                     value={barcode}
                                     onChange={handleBarcodeChange}
-                                    />
-                            </div> :
-                            <></>
-                        }
-                        {props.board.displayMemo ?
-                            <div>
-                                <TextField
-                                    margin="dense"
-                                    label="Memo"
-                                    multiline
-                                    rows={1}
-                                    rowsMax={16}
-                                    fullWidth
-                                    value={memo}
-                                    onChange={handleMemoChange}
                                     />
                             </div> :
                             <></>

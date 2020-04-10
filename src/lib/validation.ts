@@ -17,7 +17,7 @@ export function pickEditableStickyProps(sticky: KanbanRecord) {
         tags: sticky.tags || [],
         description: sticky.description || '',
         barcode: sticky.barcode || '',
-        memo: sticky.memo || '',
+        taskName: sticky.taskName || '',
     }));
 }
 
@@ -29,7 +29,7 @@ export function pickEditableBoardProps(board: KanbanBoardRecord) {
         teamOrStories: board.teamOrStories || [],
         tags: board.tags || [],
         displayBarcode: !!board.displayBarcode,
-        displayMemo: !!board.displayMemo,
+        displayTaskName: !!board.displayTaskName,
         displayFlags: !!board.displayFlags,
         displayTags: !!board.displayTags,
         preferArchive: !!board.preferArchive,
@@ -75,7 +75,7 @@ export function validateStickyProps(sticky: KanbanRecord) {
     if (typeof sticky.barcode !== 'string') {
         throw new Error('string property "barcode" is required.');
     }
-    if (typeof sticky.memo !== 'string') {
+    if (typeof sticky.taskName !== 'string') {
         throw new Error('string property "memo" is required.');
     }
     return sticky;
@@ -141,7 +141,7 @@ export function validateBoardProps(board: KanbanBoardRecord) {
     if (typeof board.displayBarcode !== 'boolean') {
         throw new Error('boolean property "displayBarcode" is required.');
     }
-    if (typeof board.displayMemo !== 'boolean') {
+    if (typeof board.displayTaskName !== 'boolean') {
         throw new Error('boolean property "displayMemo" is required.');
     }
     if (typeof board.displayFlags !== 'boolean') {

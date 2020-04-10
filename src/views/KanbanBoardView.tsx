@@ -136,16 +136,9 @@ const Sticky_: React.FC<StickyProps> = (props) => {
                     }
                     <div
                         className="KanbanBoardView-sticky-description"
-                        dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(marked(props.record.description))}} />
+                        dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(marked(props.record.taskName))}} />
                     {props.board.displayBarcode && props.record.barcode ?
-                        <div className="KanbanBoardView-sticky-barcode"
-                            dangerouslySetInnerHTML={{__html: new Qr({
-                            fill: true,
-                            fillColor: isDark ? '#fff' : '#000',
-                            cellSize: 2,
-                            unit: 'px',
-                            data: props.record.barcode,
-                        }).toImgTag()}} />
+                        <div className="KanbanBoardView-sticky-barcode"/>
                         : <></>
                     }
                     {props.record.flags.includes('Marked') ?
@@ -343,13 +336,13 @@ const KanbanBoardView: React.FC<KanbanBoardViewProps> = (props) => {
                     ))}
                 </tbody>
             </table>
-            {props.activeBoard.boardNote ?
-                <div className="KanbanBoardView-board-note-wrap">
-                    <div className="KanbanBoardView-board-note"
-                        dangerouslySetInnerHTML={{__html : DOMPurify.sanitize(marked(props.activeBoard.boardNote))}} />
-                </div> :
-                <></>
-            }
+            {/*{props.activeBoard.boardNote ?*/}
+            {/*    <div className="KanbanBoardView-board-note-wrap">*/}
+            {/*        <div className="KanbanBoardView-board-note"*/}
+            {/*            dangerouslySetInnerHTML={{__html : DOMPurify.sanitize(marked(props.activeBoard.boardNote))}} />*/}
+            {/*    </div> :*/}
+            {/*    <></>*/}
+            {/*}*/}
             {textInputOpen.open ?
                 <TextInputDialog
                     open={true}

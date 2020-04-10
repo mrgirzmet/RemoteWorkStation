@@ -124,63 +124,29 @@ export const initialData = {
             "completed": true
         }],
         "teamOrStories": [{
-            "value": "Team A",
-            "caption": "🐆 Team A",
+            "value": "Mert Ünsal",
+            "caption": "Mert Ünsal",
             "className": "team-or-story-team-a"
         }, {
-            "value": "Team B",
-            "caption": "🦃 Team B",
+            "value": "Teyfik Avkan",
+            "caption": "Teyfik Avkan",
             "className": "team-or-story-team-b"
         }, {
-            "value": "Team C",
-            "caption": "🐍 Team C",
+            "value": "Gözde Erdoğan",
+            "caption": "Gözde Erdoğan",
+            "className": "team-or-story-team-c"
+        }, {
+            "value": "Enes Ağaoğlu",
+            "caption": "Enes Ağaoğlu",
+            "className": "team-or-story-team-c"
+        }, {
+            "value": "Ömer Çelik",
+            "caption": "Ömer Çelik",
             "className": "team-or-story-team-c"
         }],
-        "tags": [{
-            "value": "bug",
-            "className": "tag-bug"
-        }, {
-            "value": "ok",
-            "className": "tag-ok"
-        }, {
-            "value": "NG",
-            "className": "tag-NG"
-        }, {
-            "value": "PR",
-            "className": "tag-PR"
-        }, {
-            "value": "rejected",
-            "className": "tag-rejected"
-        }, {
-            "value": "pending",
-            "className": "tag-pending"
-        }, {
-            "value": "merged",
-            "className": "tag-merged"
-        }, {
-            "value": "critical",
-            "className": "tag-critical"
-        }, {
-            "value": "high",
-            "className": "tag-high"
-        }, {
-            "value": "moderate",
-            "className": "tag-moderate"
-        }, {
-            "value": "low",
-            "className": "tag-low"
-        }, {
-            "value": "⭐",
-            "className": "tag-star"
-        }, {
-            "value": "⭐⭐",
-            "className": "tag-star"
-        }, {
-            "value": "⭐⭐⭐",
-            "className": "tag-star"
-        }],
+        "tags": [],
         "displayBarcode": true,
-        "displayMemo": true,
+        "displayTaskName": true,
         "displayFlags": true,
         "displayTags": true,
         "preferArchive": false,
@@ -192,158 +158,185 @@ export const initialData = {
         "type": "kanban",
         "dueDate": "",
         "description":
-            "# Welcome to the Kanban Board App!\n" +
-            "* This is a kanban (or sticky).\n" +
-            "* Write one task for one kanban.\n" +
-            "* To add a kanban to the board, Tap or click the “+” icon in the upper left corner of the board.\n" +
-            "* Tap or click on kanban to edit.\n" +
-            "* Drag and drop the kanban to change the status.",
+            "# Örnek bir task!\n" +
+            "* Yarışmayı Kazanmamız Gerek!!!",
         "barcode": "",
-        "memo": "",
+        "taskName": "Task1",
         "flags": [],
         "tags": [],
         "boardId": "",
-        "teamOrStory": "Team B",
+        "teamOrStory": "Mert Ünsal",
         "taskStatus": "Backlog"
     }, {
         "type": "kanban",
         "dueDate": "",
         "description":
-            "* Board and Kanban data are stored in the browser's local “indexed DB”.\n" +
-            "* You can use a remote [“CouchDB”](https://couchdb.apache.org) server to synchronize multiple device boards.\n" +
-            "* You can get a fully managed CouchDB server with [“IBM Cloudant®” from IBM Cloud](https://www.ibm.com/cloud/cloudant).\n" +
-            "* Create an [IBM Cloud Lite account](https://www.ibm.com/cloud/free/) and get a free tier without a credit card.",
+            "# Örnek bir task!\n" +
+            "*Kesinlikle Yarışmayı Kazanmamız Gerek!!!",
         "barcode": "",
-        "memo": "",
+        "taskName": "Task2",
         "flags": [],
         "tags": [],
         "boardId": "",
-        "teamOrStory": "Team B",
+        "teamOrStory": "Mert Ünsal",
+        "taskStatus": "Done"
+    }, {
+        "type": "kanban",
+        "dueDate": "",
+        "description":
+            "# Örnek bir task!\n" +
+            "*X Tasarımı Yapılacak",
+        "barcode": "",
+        "taskName": "Task3",
+        "flags": [],
+        "tags": [],
+        "boardId": "",
+        "teamOrStory": "Mert Ünsal",
         "taskStatus": "ToDo"
     }, {
         "type": "kanban",
         "dueDate": "",
         "description":
-            "# Go [Settings](#/config/) to setup\n\n" +
-            "----\n\n" +
-            "* `remote.endpointUrl`: Cloudant `External Endpoint` URL w/ DB name\n" +
-            "  * e.g. `https://???-bluemix.cloudant.com/mydb`\n" +
-            "* `remote.user`: Cloudant `API Key`\n" +
-            "* `remote.password`: Cloudant `API Key`'s password",
+            "# Örnek bir task!\n" +
+            "*X Tasarımı Yapılacak",
         "barcode": "",
-        "memo": "",
+        "taskName": "Task4",
         "flags": [],
         "tags": [],
         "boardId": "",
-        "teamOrStory": "Team B",
-        "taskStatus": "ToDo"
-    }, {
-        "type": "kanban",
-        "dueDate": "",
-        "description":
-            "* You can customize the appearance and behavior of the board and kanban in the configuration editor view.\n\n\n" +
-            "----\n\n" +
-            "# Go [Editor](#/edit/) to setup",
-        "barcode": "",
-        "memo": "",
-        "flags": [],
-        "tags": [],
-        "boardId": "",
-        "teamOrStory": "Team B",
+        "teamOrStory": "Teyfik Avkan",
         "taskStatus": "InProgress"
     }, {
         "type": "kanban",
         "dueDate": "2030-01-01",
         "description":
-            "### Hello, kanban board !\n\n" +
-            "* ~aaa~\n" +
-            "  * **bbb**\n" +
-            "* *ccc*\n\n" +
-            "----\n\n" +
-            "https://shellyln.github.io/\n\n" +
-            "![logo](https://shellyln.github.io/assets/image/shellyln.png)",
+            "# Örnek bir task!\n" +
+            "*Y Tasarımı Yapılacak",
         "barcode": "12345",
-        "memo": "memo",
+        "taskName": "Task5",
         "flags": ["Marked"],
-        "tags": ["PR", "bug", "ok", "NG", "rejected", "pending", "merged", "critical", "high", "moderate", "low", "⭐⭐⭐"],
+        // "tags": ["PR", "bug", "ok", "NG", "rejected", "pending", "merged", "critical", "high", "moderate", "low", "⭐⭐⭐"],
+        "tags": [],
         "boardId": "",
-        "teamOrStory": "Team B",
+        "teamOrStory": "Teyfik Avkan",
         "taskStatus": "Staging"
     }, {
         "type": "kanban",
         "dueDate": "",
         "description":
-            "# What is a Kanban Board?\n" +
-            "https://www.atlassian.com/agile/kanban/boards",
+            "# Örnek bir task!\n" +
+            "*Toplantı Yapılacak",
         "barcode": "",
-        "memo": "",
+        "taskName": "Task6",
         "flags": [],
         "tags": [],
         "boardId": "",
-        "teamOrStory": "Team C",
+        "teamOrStory": "Gözde Erdoğan",
         "taskStatus": "Backlog"
     }, {
         "type": "kanban",
         "dueDate": "",
         "description":
-            "# What are WIP limits?\n" +
-            "https://www.atlassian.com/agile/kanban/wip-limits",
+            "# Örnek bir task!\n" +
+            "*Chat eklenecek",
         "barcode": "",
-        "memo": "",
+        "taskName": "Task7",
         "flags": [],
         "tags": [],
         "boardId": "",
-        "teamOrStory": "Team C",
-        "taskStatus": "Backlog"
+        "teamOrStory": "Gözde Erdoğan",
+        "taskStatus": "Done"
     }, {
         "type": "kanban",
         "dueDate": "",
         "description":
-            "# Get Started With Cloudant in IBM Cloud\n" +
-            "https://developer.ibm.com/clouddataservices/docs/cloudant/get-started/",
+            "# Örnek bir task!\n" +
+            "*Mail eklenecek",
         "barcode": "",
-        "memo": "",
+        "taskName": "Task8",
         "flags": [],
         "tags": [],
         "boardId": "",
-        "teamOrStory": "Team C",
+        "teamOrStory": "Enes Ağaoğlu",
         "taskStatus": "ToDo"
     }, {
         "type": "kanban",
         "dueDate": "",
         "description":
-            "# Sign up for IBM Cloud\n" +
-            "https://cloud.ibm.com/registration",
+            "# Örnek bir task!\n" +
+            "*Login eklenecek",
         "barcode": "",
-        "memo": "",
+        "taskName": "Task10",
         "flags": [],
         "tags": [],
         "boardId": "",
-        "teamOrStory": "Team C",
-        "taskStatus": "ToDo"
+        "teamOrStory": "Enes Ağaoğlu",
+        "taskStatus": "Done"
     }, {
         "type": "kanban",
         "dueDate": "",
         "description":
-            "Release Kanban board app v0.0.1\n\n" +
-            "![image](https://shellyln.github.io/knbn/images/icons/icon-32x32.png)",
+            "# Örnek bir task!\n" +
+            "*Profil eklenecek",
         "barcode": "",
-        "memo": "",
+        "taskName": "Task0",
         "flags": [],
-        "tags": ["ok", "merged", "v0.0.1", "feature-something", "#1", "#2"],
+        //"tags": ["ok", "merged", "v0.0.1", "feature-something", "#1", "#2"],
+        "tags": [],
         "boardId": "",
-        "teamOrStory": "Team A",
+        "teamOrStory": "Teyfik Avkan",
         "taskStatus": "Done"
     }, {
         "type": "kanban",
         "dueDate": "2030-01-01",
-        "description": "This record is archived.",
+        "description":
+            "# Örnek bir task!\n" +
+            "*Exit eklenecek",
         "barcode": "",
-        "memo": "",
+        "taskName": "Task9",
         "flags": ["Archived"],
         "tags": [],
         "boardId": "",
-        "teamOrStory": "Team B",
+        "teamOrStory": "Teyfik Avkan",
         "taskStatus": "Backlog"
+    },{
+        "type": "kanban",
+        "dueDate": "",
+        "description":
+            "# Örnek bir task!\n" +
+            "* Yarışmayı Kazanmamız Gerek!!!",
+        "barcode": "",
+        "taskName": "Task13",
+        "flags": [],
+        "tags": [],
+        "boardId": "",
+        "teamOrStory": "Ömer Çelik",
+        "taskStatus": "Backlog"
+    }, {
+        "type": "kanban",
+        "dueDate": "",
+        "description":
+            "# Örnek bir task!\n" +
+            "* Yarışmayı Kazanmamız Gerek!!!",
+        "barcode": "",
+        "taskName": "Task11",
+        "flags": [],
+        "tags": [],
+        "boardId": "",
+        "teamOrStory": "Ömer Çelik",
+        "taskStatus": "InProgress"
+    }, {
+        "type": "kanban",
+        "dueDate": "",
+        "description":
+            "# Örnek bir task!\n" +
+            "* Yarışmayı Kazanmamız Gerek!!!",
+        "barcode": "",
+        "taskName": "Task12",
+        "flags": [],
+        "tags": [],
+        "boardId": "",
+        "teamOrStory": "Ömer Çelik",
+        "taskStatus": "ToDo"
     }]
 }
